@@ -1,0 +1,55 @@
+$standard-font-size: 0.8rem;
+$primary-font-color: #525252;
+
+.container {
+  display: flex;
+  justify-content: center;
+
+  &-search {
+    margin-top: 20px;
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+  }
+
+  &-input {
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: white;
+    input {
+      flex: 1;
+      color: $primary-font-color;
+      font-size: $standard-font-size;
+      border: none;
+      height: 30px;
+      outline: none;
+    }
+  }
+  .search-icon {
+    display: flex;
+    align-items: center;
+  }
+  &-suggestion {
+    border-radius: 5px;
+    color: $primary-font-color;
+    font-size: $standard-font-size;
+    margin-top: 3px;
+    height: 200px;
+    width: 90%;
+    background-color: white;
+    overflow: hidden;
+    overflow-y: auto;
+    .items {
+      padding: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: lightblue;
+      }
+    }
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
