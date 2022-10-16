@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import "./searchBar.scss";
 import SearchIcon from "@mui/icons-material/Search";
-import data from "./data.json";
 
-export const SearchBar = ({ placeholder }) => {
+export const SearchBar = ({ placeholder, data }) => {
   const [searchedItem, setsearchedItem] = useState("");
   const [filteredData, setfilteredData] = useState([]);
-
   const handleChange = (e) => {
     const value = e.target.value;
     setsearchedItem(value);
@@ -15,7 +13,6 @@ export const SearchBar = ({ placeholder }) => {
     );
     setfilteredData(filtered.slice(0, 15));
   };
-
   const handleSuggestionClick = (value) => {
     setsearchedItem(value);
     setfilteredData([]);
